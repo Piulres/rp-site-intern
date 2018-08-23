@@ -41,51 +41,6 @@
                   $( ".relative" ).toggleClass( "act" );
                 });
 
-                $(".lateral a, .aba a, .btn-home").click(function () {
-                    if ($(".relative").hasClass("act")) {
-                      $('.relative').removeClass("act");                        
-                    }else{
-                    }
-
-                    if (  $( 'img.logo' ).css( "transform" ) == 'none' ){
-                        $('img.logo').css("transform","rotate(360deg)");
-                    } else {
-                        $('img.logo').css("transform","" );
-                    }
-
-                    var x = $(this).attr("href");
-                    var href = x.substring(1, x.length);
-
-                    var lateral = $('#lateral').attr('class').split(' ').pop();
-                    $('#lateral').removeClass(lateral);
-                    $('#lateral').addClass(href);
-
-                    var blade = $('#blade').attr('class').split(' ').pop();
-                    $('#blade').removeClass(blade);
-                    $('#blade').addClass(href);
-
-                    var btnhome = $('#btn-home').attr('class').split(' ').pop();
-                    $('#btn-home').removeClass(btnhome);
-                    $('#btn-home').addClass(href);
-
-                });
-
-                // $( ".aba a" ).click(function() {
-                        
-                //     if ($("#lateral").hasClass("act")) {
-                //       $('#lateral').removeClass("act");                        
-                //     }else{
-                //       $('#lateral').addClass("act");
-                //     }
-                
-                // });
-
-                // $(".lateral a").click(function(){
-                //     var x = 'red';
-                //     var x = $(this).attr("class").split(' ').pop();
-                //     console.log(x);                    
-                // });
-
                 $('.owl-carousel1').owlCarousel({
                     items:1,
                     loop:true,
@@ -97,7 +52,7 @@
                     URLhashListener:true,
                     autoplayHoverPause:true,
                     startPosition: 'URLHash'
-                });
+                });                
 
                 $('.owl-carousel2').owlCarousel({
                     autoplay:true,
@@ -135,7 +90,53 @@
                     loop:true,
                     items:1,
                     autoplayTimeout:3000
-                });    
+                });
+
+                // $owl.trigger('refresh.owl.carousel1');
+                
+                $('.lateral a, .aba a').on('click', function () {
+                    $('.owl-carousel').trigger('stop.owl.autoplay');
+
+                    //simple one (EDIT: not enough to make it work after testing it):
+                    //$('.owl-carousel').trigger('changeOption.owl.carousel', { autoplay: false });
+
+                    //or more complicated (will work for one carousel only, or else use 'each'):
+                    //EDIT: this one seems to work
+                    var carousel = $('.owl-carousel').data('owl.carousel');
+                    carousel.settings.autoplay = false; //don't know if both are necessary
+                    carousel.options.autoplay = false;
+                    $('.owl-carousel').trigger('refresh.owl.carousel');
+                });
+
+                $(".lateral a, .aba a, .btn-home").click(function () {                    
+
+                    if ($(".relative").hasClass("act")) {
+                      $('.relative').removeClass("act");                        
+                    }else{
+                    }
+
+                    if (  $( 'img.logo' ).css( "transform" ) == 'none' ){
+                        $('img.logo').css("transform","rotate(360deg)");
+                    } else {
+                        $('img.logo').css("transform","" );
+                    }
+
+                    var x = $(this).attr("href");
+                    var href = x.substring(1, x.length);
+
+                    var lateral = $('#lateral').attr('class').split(' ').pop();
+                    $('#lateral').removeClass(lateral);
+                    $('#lateral').addClass(href);
+
+                    var blade = $('#blade').attr('class').split(' ').pop();
+                    $('#blade').removeClass(blade);
+                    $('#blade').addClass(href);
+
+                    var btnhome = $('#btn-home').attr('class').split(' ').pop();
+                    $('#btn-home').removeClass(btnhome);
+                    $('#btn-home').addClass(href);
+
+                });
 
                 $('.video-container img').click(function(){
                     video = '<iframe src="'+ $(this).attr('data-video') +'"></iframe>';
@@ -200,7 +201,7 @@
 
                 $("body").css("overflow", "hidden");
 
-            }); 
+            });
             // doc.ready
 
             // loader + scrollreveal
