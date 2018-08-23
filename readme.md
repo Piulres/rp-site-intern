@@ -2,7 +2,7 @@
 ### with RPX
 > Version 1.0.4
 
-Prepare your .env file there with database connection and other settings
+Prepare your .env file there with database connection and other settings.
 
 ## Getting Started
 
