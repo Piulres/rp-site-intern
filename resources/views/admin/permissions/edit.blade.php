@@ -15,7 +15,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('title', trans('global.permissions.fields.title').'*', ['class' => 'control-label']) !!}
                     {!! Form::text('title', old('title'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Título da Permissão</p>
                     @if($errors->has('title'))
                         <p class="help-block">
                             {{ $errors->first('title') }}

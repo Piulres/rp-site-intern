@@ -13,8 +13,8 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('title', trans('global.roles.fields.title').'*', ['class' => 'control-label']) !!}
-                    {!! Form::text('title', old('title'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                    <p class="help-block"></p>
+                    {!! Form::text('title', old('title'), ['class' => 'form-control', 'placeholder' => 'Ex: Diretor', 'required' => '']) !!}
+                    <p class="help-block">Título da Função</p>
                     @if($errors->has('title'))
                         <p class="help-block">
                             {{ $errors->first('title') }}
@@ -32,7 +32,7 @@
                         {{ trans('global.app_deselect_all') }}
                     </button>
                     {!! Form::select('permission[]', $permissions, old('permission'), ['class' => 'form-control select2', 'multiple' => 'multiple', 'id' => 'selectall-permission' , 'required' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Permissões da Função</p>
                     @if($errors->has('permission'))
                         <p class="help-block">
                             {{ $errors->first('permission') }}

@@ -15,7 +15,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('name', trans('global.users.fields.name').'*', ['class' => 'control-label']) !!}
                     {!! Form::text('name', old('name'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Nome do Usuário</p>
                     @if($errors->has('name'))
                         <p class="help-block">
                             {{ $errors->first('name') }}
@@ -27,7 +27,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('email', trans('global.users.fields.email').'*', ['class' => 'control-label']) !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">E-mail do Usuário</p>
                     @if($errors->has('email'))
                         <p class="help-block">
                             {{ $errors->first('email') }}
@@ -39,7 +39,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('password', trans('global.users.fields.password').'*', ['class' => 'control-label']) !!}
                     {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Senha do Usuário</p>
                     @if($errors->has('password'))
                         <p class="help-block">
                             {{ $errors->first('password') }}
@@ -57,7 +57,7 @@
                         {{ trans('global.app_deselect_all') }}
                     </button>
                     {!! Form::select('role[]', $roles, old('role') ? old('role') : $user->role->pluck('id')->toArray(), ['class' => 'form-control select2', 'multiple' => 'multiple', 'id' => 'selectall-role' , 'required' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Função do Usuário</p>
                     @if($errors->has('role'))
                         <p class="help-block">
                             {{ $errors->first('role') }}

@@ -15,7 +15,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('cliente', trans('global.depoimentos.fields.cliente').'', ['class' => 'control-label']) !!}
                     {!! Form::text('cliente', old('cliente'), ['class' => 'form-control', 'placeholder' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Cliente</p>
                     @if($errors->has('cliente'))
                         <p class="help-block">
                             {{ $errors->first('cliente') }}
@@ -27,7 +27,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('empresa', trans('global.depoimentos.fields.empresa').'', ['class' => 'control-label']) !!}
                     {!! Form::text('empresa', old('empresa'), ['class' => 'form-control', 'placeholder' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Nome da Empresa</p>
                     @if($errors->has('empresa'))
                         <p class="help-block">
                             {{ $errors->first('empresa') }}

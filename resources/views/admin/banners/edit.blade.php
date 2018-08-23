@@ -14,8 +14,8 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('texto', trans('global.banner.fields.texto').'', ['class' => 'control-label']) !!}
-                    {!! Form::text('texto', old('texto'), ['class' => 'form-control', 'placeholder' => 'Texto do Banner']) !!}
-                    <p class="help-block">Texto do Banner</p>
+                    {!! Form::text('texto', old('texto'), ['class' => 'form-control', 'placeholder' => 'Ex: Tecnologia']) !!}
+                    <p class="help-block">Título do Banner</p>
                     @if($errors->has('texto'))
                         <p class="help-block">
                             {{ $errors->first('texto') }}
@@ -33,7 +33,7 @@
                     {!! Form::hidden('banner_max_size', 5) !!}
                     {!! Form::hidden('banner_max_width', 4096) !!}
                     {!! Form::hidden('banner_max_height', 4096) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">tamanho: 797x385 (.png)</p>
                     @if($errors->has('banner'))
                         <p class="help-block">
                             {{ $errors->first('banner') }}
@@ -45,7 +45,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('slug', trans('global.banner.fields.slug').'', ['class' => 'control-label']) !!}
                     {!! Form::text('slug', old('slug'), ['class' => 'form-control', 'placeholder' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Slug do Banner ( Cores )</p>
                     @if($errors->has('slug'))
                         <p class="help-block">
                             {{ $errors->first('slug') }}
@@ -57,7 +57,7 @@
                 <div class="col-xs-12 form-group">
                     {!! Form::label('link', trans('global.banner.fields.link').'', ['class' => 'control-label']) !!}
                     {!! Form::text('link', old('link'), ['class' => 'form-control', 'placeholder' => '']) !!}
-                    <p class="help-block"></p>
+                    <p class="help-block">Link do Banner</p>
                     @if($errors->has('link'))
                         <p class="help-block">
                             {{ $errors->first('link') }}
