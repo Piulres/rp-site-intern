@@ -18,6 +18,7 @@ class Create1534872729DepoimentosTable extends Migration
                 $table->string('cliente')->nullable();
                 $table->string('empresa')->nullable();
                 $table->text('depoimento')->nullable();
+                $table->text('slug')->nullable();
                 
                 $table->timestamps();
                 $table->softDeletes();

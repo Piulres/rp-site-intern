@@ -192,6 +192,7 @@ CREATE TABLE `depoimentos` (
   `cliente` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `empresa` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `depoimento` text COLLATE utf8mb4_unicode_ci,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -201,12 +202,12 @@ CREATE TABLE `depoimentos` (
 -- Extraindo dados da tabela `depoimentos`
 --
 
-INSERT INTO `depoimentos` (`id`, `cliente`, `empresa`, `depoimento`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Multicanal', 'Porto Seguro', 'Ter a RP Innovation como fornecedor nos dá a segurança de que teremos sempre o foco na Inovação, uma das competências mais importantes para a Porto Seguro, além do desafio de manter a qualidade na produção de soluções educacionais priorizando sempre a entrega e a excelência no atendimento.', '2018-08-22 20:59:22', '2018-08-23 00:29:32', NULL),
-(2, 'Escola de Negócios', 'Porto Seguro', 'A RP Innovation se diferencia pela personalização ao atendimento de seus clientes, oferece-nos soluções inovadoras que se adequam às nossas necessidades. Uma sintonia muito boa que desde o primeiro contato mostrou ser promissora e aderente as necessidades da Porto Seguro.', '2018-08-22 20:59:44', '2018-08-23 00:29:18', NULL),
-(3, 'Ellen Junqueira', 'Clipe de Casamento', 'A palavra comprometimento resume. O atendimento, a assistência, a qualidade são mantidas do começa ao fim! Ficamos mega satisfeitos com o resultado apresentado, aliás eles cuidaram com muito carinho de cada detalhe para que tudo ocorresse como havíamos falado. E buscaram trazer pra nós o que havia de melhor no mercado, assim nosso pré wedding ficou com a nossa cara, e o melhor, surpreendente!', '2018-08-22 21:00:01', '2018-08-23 00:42:50', NULL),
-(4, 'EdCarlos Carreto', NULL, 'Com um site objetivo e um sistema CRM customizado, a Master Web Solutions nos proporcionou um aumento de contatos e cotações, melhorando nosso atendimento ao cliente e consequentemente elevando nosso faturamento. Estamos felizes com essa essa escolha e parceria!', '2018-08-22 21:00:14', '2018-08-23 00:28:57', '2018-08-23 00:28:57'),
-(5, 'Studio Hayat', NULL, 'Atendem as necessidades do cliente e em caso de dúvidas não demoram para dar o suporte. Estamos muito felizes com os serviços prestados pela Master! Recomendo!', '2018-08-22 21:00:35', '2018-08-23 00:29:02', '2018-08-23 00:29:02');
+INSERT INTO `depoimentos` (`id`, `cliente`, `empresa`, `depoimento`,`slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Multicanal', 'Porto Seguro', 'Ter a RP Innovation como fornecedor nos dá a segurança de que teremos sempre o foco na Inovação, uma das competências mais importantes para a Porto Seguro, além do desafio de manter a qualidade na produção de soluções educacionais priorizando sempre a entrega e a excelência no atendimento.','yellow', '2018-08-22 20:59:22', '2018-08-23 00:29:32', NULL),
+(2, 'Escola de Negócios', 'Porto Seguro', 'A RP Innovation se diferencia pela personalização ao atendimento de seus clientes, oferece-nos soluções inovadoras que se adequam às nossas necessidades. Uma sintonia muito boa que desde o primeiro contato mostrou ser promissora e aderente as necessidades da Porto Seguro.','blue', '2018-08-22 20:59:44', '2018-08-23 00:29:18', NULL),
+(3, 'Ellen Junqueira', 'Clipe de Casamento', 'A palavra comprometimento resume. O atendimento, a assistência, a qualidade são mantidas do começa ao fim! Ficamos mega satisfeitos com o resultado apresentado, aliás eles cuidaram com muito carinho de cada detalhe para que tudo ocorresse como havíamos falado. E buscaram trazer pra nós o que havia de melhor no mercado, assim nosso pré wedding ficou com a nossa cara, e o melhor, surpreendente!','purple', '2018-08-22 21:00:01', '2018-08-23 00:42:50', NULL),
+(4, 'EdCarlos Carreto', NULL, 'Com um site objetivo e um sistema CRM customizado, a Master Web Solutions nos proporcionou um aumento de contatos e cotações, melhorando nosso atendimento ao cliente e consequentemente elevando nosso faturamento. Estamos felizes com essa essa escolha e parceria!','orange', '2018-08-22 21:00:14', '2018-08-23 00:28:57', '2018-08-23 00:28:57'),
+(5, 'Studio Hayat', NULL, 'Atendem as necessidades do cliente e em caso de dúvidas não demoram para dar o suporte. Estamos muito felizes com os serviços prestados pela Master! Recomendo!','black', '2018-08-22 21:00:35', '2018-08-23 00:29:02', '2018-08-23 00:29:02');
 
 -- --------------------------------------------------------
 

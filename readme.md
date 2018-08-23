@@ -1,4 +1,4 @@
-# Site RP v1
+# Site RP v1.1
 ### with RPX
 > Version 1.0.4
 

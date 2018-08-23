@@ -245,8 +245,7 @@
                                 <!-- href="{{ asset('uploads/' . $banners->link) }}" -->
                                 <a 
                                      
-                                    href="#servicos" 
-                                    target="_blank">
+                                    href="#servicos">
                                     <img src="{{url('/' . $banners->banner)}}"/>
                                     <p class="black-text">{{ $banners->descricao }}</p>
                                 </a>
