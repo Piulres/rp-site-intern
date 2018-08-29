@@ -1,10 +1,11 @@
 <?php
 
 Route::get('/', 'HomeController@jaja');
+Route::get('/teste', 'TesteController@jaja');
 
 // Route::get('/', function () { return redirect('/admin/home'); });
 
-// Authentication Routes...
+// Authentication Routes... 
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
 $this->post('login', 'Auth\LoginController@login')->name('auth.login');
 $this->post('logout', 'Auth\LoginController@logout')->name('auth.logout');
@@ -56,6 +57,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::post('infos_mass_destroy', ['uses' => 'Admin\InfosController@massDestroy', 'as' => 'infos.mass_destroy']);
     Route::post('infos_restore/{id}', ['uses' => 'Admin\InfosController@restore', 'as' => 'infos.restore']);
     Route::delete('infos_perma_del/{id}', ['uses' => 'Admin\InfosController@perma_del', 'as' => 'infos.perma_del']);
+
 
 
 
