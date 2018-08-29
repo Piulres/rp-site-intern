@@ -474,6 +474,12 @@ section.clientes {
     margin-top: 155px;
 }
 
+section.clientes.teste {
+    margin-top: 0;
+    background-image: url(../images/teste.jpg);
+    background-size: cover;
+}
+
 section.testimonial {
     position: relative;
     top: -5px;
