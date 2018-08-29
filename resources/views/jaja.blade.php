@@ -9,7 +9,7 @@
                 </a>
                 -->
 
-                <div class="row">
+                <div class="row desktop">
                     <div class="col s2">
                     </div>
                     <div class="col s8">
@@ -95,8 +95,7 @@
                             </a>
                         </div>
                     </li>
-                    -->
-
+                    -->                    
                     <li>
                         <a class="black-text" href="#">
                             Home
@@ -127,6 +126,14 @@
                             Blog
                         </a>
                     </li>
+
+                    <li class="social">
+                        <a href="https://www.linkedin.com/company/rpgroup/" target="_blank"><i class="black-text fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/rperformancegroup/" target="_blank"><i class="black-text fab fa-facebook-square"></i></a>
+                        <a href="https://www.instagram.com/rperformancegroup/" target="_blank"><i class="black-text fab fa-instagram"></i></a>
+                        <a href="https://vimeo.com/rperformancegroup" target="_blank"><i class="black-text fab fa-vimeo"></i></a>
+                    </li>
+
                     <!--
                     <li>
                         <div class="divider">
@@ -214,7 +221,7 @@
             </div>
         </nav>
 
-        <section class="banner lighten-2 grey">
+        <section id="banner" class="banner lighten-2 grey">
             
             <div class="row">
 
@@ -517,6 +524,70 @@
 
         <div class="scrolltop">
             <i class="material-icons arrow_upward">arrow_upward</i>
+        </div>
+
+        <div class="mobile lighten-2 grey">
+
+            <section class="banner-mobile">
+
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col s12 black-text">
+                            <a href="/">
+                                <img class="trick logo2" src="images/logo2.png"/>
+                            </a>
+                        </div>
+
+                        <div class="col s12 black-text trick">
+                            <div class="owl-carousel6 owl-carousel owl-theme" style="min-width: 320px;">
+                                @foreach($banner as $banners)
+                                <div class="item justify" data-hash="{{ $banners->slug }}">
+                                    <!-- href="{{ asset('uploads/' . $banners->link) }}" -->
+                                    <a 
+                                         
+                                        href="#servicos">
+                                        <img src="{{url('/' . $banners->banner)}}"/>
+                                        <p class="black-text">{{ $banners->descricao }}</p>
+                                    </a>
+                                </div>
+                                @endforeach                           
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="grupo-mobile center black">
+
+                <div class="container">
+                    @foreach($video as $videos)
+                    <div class="row">             
+
+                        <div class="col s12">
+                                <!-- <img class="trick play" src="images/play.png"/> -->
+                                <h2 class="trick white-text">{{ $videos->titulo }}</h2>
+                                <hr class="trick">
+                                <p class="trick white-text">{{ $videos->texto }}</p>
+                        </div>
+                        <div class="col s12">
+                           
+                            <div class="trick video-container">
+                                <!-- <img src="http://www.gravatar.com/avatar/48231943117b8e0d0db0abdcb57a9032?s=32&d=identicon&r=PG" data-video="http://www.youtube.com/embed/zP_D_YKnwi0?autoplay=1"> -->
+                                <!-- <img src="images/play.png" data-video="http://www.youtube.com/embed/Q8TXgCzxEnw?autoplay=1"/> -->
+                                <img src="images/bg_video.jpg" data-video="{{ $videos->url }}"/>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    @endforeach
+                </div>
+
+            </section>
+
         </div>
         
  @include('partials.back')

@@ -92,6 +92,15 @@
                     autoplayTimeout:3000
                 });
 
+                $('.owl-carousel6').owlCarousel({
+                    autoplay:true,
+                    dots:true,
+                    margin:0,
+                    loop:true,
+                    items:1,
+                    autoplayTimeout:8000
+                });
+
                 // $owl.trigger('refresh.owl.carousel1');
                 
                 $('.lateral a, .aba a').on('click', function () {

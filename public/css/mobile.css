@@ -1,0 +1,136 @@
+section#banner,
+section#grupo,
+section#servicos,
+section#clientes,
+section#depoimentos,
+section#contato,
+.scrolltop,
+.desktop {
+	display: none;
+}
+
+#loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9999;
+    display:  block;
+    background-color: white;
+    overflow: hidden;
+}
+
+#spinner {
+    position: absolute;
+    top: 0px;
+    left: 40%;
+    bottom: 0;
+    margin: auto;
+    max-height: 100px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.mobile .logo2 {
+	width: 100%;
+	padding: 50px 20px;
+}
+
+.banner-mobile {
+	min-height: 520px;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grupo-mobile {
+	min-height: 700px;
+}
+
+.video-container img {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%; 
+    /* background-origin: content-box; */
+    /* padding: 18% 40%; */
+    /* display: block; */
+}
+
+.center {
+	text-align: center;
+}
+
+.justify {
+	text-align: justify;
+}
+
+.bar {
+  background-image: linear-gradient(to right, #f9a825, #ef6c00 )!important;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background-color: orange!important;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+	background-color: grey!important;
+}
+
+section p {
+    font-size: 1.2em;
+}
+
+li.social {
+    margin-left: 25px;
+}
+li.social a {
+    float: left;
+    padding: 5px;
+}
+li.social a i {
+    margin-right: 0;
+}

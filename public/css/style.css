@@ -3,6 +3,12 @@
 * {
     font-family: 'Montserrat', sans-serif;
 }
+#servicos p {
+    font-size: 1em;
+}
+.mobile {
+    display: none;
+}
 
 #loader {
     height: 100%;
@@ -14,9 +20,7 @@
     overflow: hidden;
 }
 
-#servicos p {
-    font-size: 1em;
-}
+
 
 #spinner {
     position: absolute;

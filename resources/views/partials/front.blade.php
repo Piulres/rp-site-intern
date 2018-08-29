@@ -9,8 +9,11 @@
             <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
             <link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-            <link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css"/>
-            <link href="css/slide.css" media="screen,projection" rel="stylesheet" type="text/css"/>
+
+            <link rel="stylesheet" media="only screen and (max-width: 400px)" type="text/css" href="css/mobile.css" />
+            <link rel="stylesheet" media="only screen and (min-width: 401px)" type="text/css" href="css/style.css" />
+            <link rel="stylesheet" media="only screen and (min-width: 401px)" type="text/css" href="css/slide.css" />
+            
             <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css"/>
             <link href="css/owl.theme.default.min.css" rel="stylesheet" type="text/css"/>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
