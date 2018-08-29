@@ -49,8 +49,7 @@
                     autoplay:true,
                     autoplayTimeout:8000,
                     autoplayHoverPause:true,
-                    URLhashListener:true,
-                    autoplayHoverPause:true,
+                    URLhashListener:true,                    
                     startPosition: 'URLHash'
                 });                
 
@@ -89,7 +88,8 @@
                     margin:0,
                     loop:true,
                     items:1,
-                    autoplayTimeout:3000
+                    autoplayHoverPause:true,
+                    autoplayTimeout:4500
                 });
 
                 // $owl.trigger('refresh.owl.carousel1');
