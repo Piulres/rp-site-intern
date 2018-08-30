@@ -15,8 +15,14 @@
 
     	<div class="row">
     		<br><br>
-    		<h4 class="center trick"><strong>Jobs (API Javascript Data)</strong></h4>
-		  <ul class="collapsible" id="data-api"></ul>
+    		<h4 class="center trick"><strong>Jobs (API Localhost)</strong></h4>
+		  <ul class="collapsible" id="jobs-api"></ul>
+    	</div>
+
+    	<div class="row">
+    		<br><br>
+    		<h4 class="center trick"><strong>Poke (API External)</strong></h4>
+		  <ul class="collection" id="poke-api"></ul>
     	</div>
     </div>
 

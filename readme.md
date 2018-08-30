@@ -32,6 +32,8 @@ Access api/ and prepare your .env file there with database connection and other 
 composer install
 php artisan migrate --seed
 php artisan key:generate
+php artisan vendor:publish --tag=lfm_config
+php artisan vendor:publish --tag=lfm_public
 ```
 
 ```

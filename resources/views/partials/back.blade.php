@@ -31,6 +31,8 @@
         </script>
         <script src="js/init.js">
         </script>
+        <script src="js/teste.js">
+        </script>
         <script type="text/javascript">
 
             $( document ).ready(function() {
