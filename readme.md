@@ -22,3 +22,18 @@ php artisan serve
 
 Email: admin@admin.com
 Password: password
+
+# Access API
+Access api/ and prepare your .env file there with database connection and other settings.
+
+## Getting Started
+
+```
+composer install
+php artisan migrate --seed
+php artisan key:generate
+```
+
+```
+php artisan serve --port=8001
+```

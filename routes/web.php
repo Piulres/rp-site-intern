@@ -3,6 +3,10 @@
 Route::get('/', 'HomeController@jaja');
 Route::get('/teste', 'TesteController@jaja');
 
+// Route::option('{all}', function(){
+//     return response('',204);
+// })->where('all', '.*');
+
 // Route::get('/', function () { return redirect('/admin/home'); });
 
 // Authentication Routes... 

@@ -7,19 +7,30 @@
 
   }); // end of document ready
 
+  $('.collapsible').collapsible();
+
 	$(window).load(function() {
-	  var valor1 = 1;
-	  var link = "http://pokeapi.co/api/v2/pokemon/" + valor1;
+	  var link = "http://localhost:8001/api/jobs/";
 	  $.ajax({
 	      url: link,
 	      type: 'GET',
 	      dataType: 'json',
-
 	    })
-	    .done(function() {
-	      console.log("success");
-	      console.log(valor1);
-	      document.getElementById("demo").innerHTML = valor1;
+	    .done(function(data) {
+			console.log("success");
+	    	console.log(data);
+	    	var jobs = data.map(function(item) {
+	    		console.log(item)
+	    		$('#data-api').append('<li>'+
+		      		'<div class="collapsible-header"><strong>'+ item.id +'. </strong>'+ item.title +'</div>'+
+		      		'<div class="collapsible-body">'+
+		      		'<span><h6><strong>Description</strong></h6>'+ item.description +'</span>'+
+		      		'<div><p><strong>Company:</strong> '+ item.company.name +'</p></div>'+
+		      		'<div><p><strong>Local:</strong> '+ item.local +'</p></div>'+
+		      		'<div><p><strong>Email:</strong> '+ item.company.email +'</p></div>'+
+		      		'</div>'+
+		    		'</li>')
+	    	});
 	    })
 	    .fail(function() {
 	      console.log("error");
