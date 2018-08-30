@@ -22,6 +22,22 @@
 
 
 
+#teste {
+    padding-bottom: 50px;
+}
+
+#teste strong {
+    font-weight: 700;
+}
+
+#teste .collapsible-header strong {
+    margin-right: 10px;
+}
+
+#teste .collapsible-body {
+    background: #FFFFFF;
+}
+
 #spinner {
     position: absolute;
     top: 0;
